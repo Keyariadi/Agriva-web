@@ -1,0 +1,836 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+/*Ini navbar */
+
+nav {
+  display: flex;               /* Menggunakan flexbox agar logo dan menu sejajar */
+  align-items: center;         /* Vertikal center untuk logo dan menu */
+  justify-content: space-between; /* Jarak antar logo dan menu */
+  background: linear-gradient(to left, #7da2ff, #eef2f7);
+  position: fixed;
+  width: 100%;
+  height: 9%;
+  top: 0; /* Menempel di bagian atas halaman */
+  z-index: 1000;
+}
+
+nav .logo {               /* Ukuran logo (bisa disesuaikan) */
+  padding-left: 77px; 
+  padding-top: 30px;         /* Padding kiri pada logo */
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  height: auto;  /* Atur tinggi logo sesuai kebutuhan */
+  width: 30%;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+nav ul {
+  list-style-type: none;       /* Menghilangkan bullet points */
+  margin: 0;                   /* Menghapus margin default */
+  padding: 0;                  /* Menghapus padding default */
+  display: flex;               /* Menyusun list items secara horizontal */
+  gap: 40px;                   /* Jarak antar item di menu */
+  padding-right: 50px;
+}
+
+nav ul li {
+  margin-right: 20px;          /* Memberikan jarak antar item */
+}
+
+nav ul li a {
+  text-decoration: none;       /* Menghapus garis bawah */
+  cursor: pointer;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a {
+  transform: scale(1.05);
+}
+
+/* Hamburger Menu */
+nav .hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+nav .hamburger .bar {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* tutup navbar */
+
+/* Ini cover */
+
+.cover_section {
+  background: linear-gradient(to left, #7da2ff, #eef2f7);
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+}
+
+.cover {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  padding: 20px;
+  top: 150px;
+  left: 75px;
+}
+
+.h4_cover {
+  color: rgb(50, 91, 153);
+  padding-bottom: 20px;
+  font-size: medium;
+  font-weight: 500;
+  padding-left: 5px;
+  
+}
+
+.h1_cover {
+  font-size: 3.6rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #000000;
+}
+
+hr {
+  border: none; 
+  height: 1px; 
+  width: 250px;
+  background-color: rgb(160, 178, 204);
+  margin: 20px 0;
+  position: absolute;
+  left: 245px;
+  top: 200px;
+}
+
+.h3_cover {
+  font-size: medium;
+  font-weight: 400;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.img_cover1 {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  left: 670px;
+  top: 30px;
+}
+
+.img_cover2 {
+  width: 15%;
+  height: auto;
+  position: absolute;
+  top: 60px;
+  left: 935px;
+}
+
+.img_cover3 {
+  display: none;
+}
+
+.ctnbutton a {
+  position: relative;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.button_cover1 {
+  background-color: #7930F7;
+  margin-top: 30px;
+  margin-right: 40px;
+  margin-left: 5px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 150px;  
+  height: 50px;
+}
+
+.a1_cover {
+  color: #eef2f7;
+}
+
+.button_cover2 {
+  background-color: #ffffff;
+  border: 2px solid #7930F7;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 150px;  
+  height: 50px; 
+}
+
+.a2_cover {
+  color: #7930F7;
+}
+
+/* Ini tutup cover */
+
+
+/* Ini About */
+
+.about {
+  background: linear-gradient(to left, #ffffff, #eef2f7);
+  width: auto;
+  height: 100vh;
+}
+
+.about_teks {
+  width: 35%;
+  height: auto;
+  position: absolute;
+  padding: 20px;
+  top: 700px;
+  right: 50px;
+}
+
+.h1_about1 {
+  font-size:2.8rem;
+  color: #2b66d4;
+}
+
+.p_about {
+  line-height: 2.8rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+.ctnbutton_about {
+  position: relative;
+  padding: 0px;
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+.button_about1 {
+  background-color: #ffffff;
+  border: 2px solid #3478f8;
+  margin-top: 10px;
+  margin-right: 40px;
+  margin-left: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 150px;  
+  height: 45px;
+}
+
+.a1_about {
+  color: #3478f8;
+  text-decoration: none;
+}
+
+.button_about2 {
+  background-color: #3478f8;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 150px;  
+  height: 45px; 
+}
+
+.a2_about {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.h1_about2 {
+  font-size: 4rem;
+  font-family: 'Times New Roman', Times, serif;
+  position: absolute;
+  top: 720px;
+  left: 300px;
+  color: #2b66d4;
+}
+
+.h1_about3 {
+  font-size: 4.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  position: absolute;
+  top: 770px;
+  left: 230px;
+  color: #2b66d4;
+}
+
+.img_about1 {
+  width: 30%;
+  height: auto;
+  position: absolute;
+  left: 200px;
+  top: 830px;
+}
+/* Ini tutup About */
+
+
+/* Ini Services */
+
+.services {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to left, #7da2ff, #eef2f7);
+}
+
+.card {
+  width: 90%;
+  height: 65%;
+  padding: 20px;
+  margin: 30px auto;
+  margin-top: 140px;
+  background: linear-gradient(to left, #7da2ff, #eef2f7);
+  border-radius: 10px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  display: flex;
+  flex-direction: wrap;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+/* Inner Cards */
+.inner-card {
+  width: 30%; /* Lebar card */
+  background-color: #ffffff;
+  padding: 10px;
+  margin: 0; /* Hilangkan margin */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.inner-card:hover {
+  transform: translateY(-40px); /* Moves the card up on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increases shadow on hover */
+}
+
+/* Text inside inner card */
+.inner-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.inner-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.img_services {
+  width: 70%;
+  height: auto;
+}
+
+.h1_services {
+  font-weight: bold;
+  position: relative;
+  left: 530px;
+  top: 90px;
+  font-size:2.8rem;
+  color: #000000;
+}
+/* Ini tutup Services */
+
+/* Ini Portofolio */
+
+.portofolio {
+  background-color: #ffffff;
+  height: 50vh;
+  display: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.img_portofolio {
+  height: auto;
+  width: 100%;
+}
+
+.img_portofolio1 {
+  height: auto;
+  padding-left: 25px;
+  width: 70%;
+}
+
+.img_portofolio5 {
+  height: auto;
+  padding-left: 25px;
+  width: 90%;
+}
+
+.img_portofolio9 {
+  height: auto;
+  padding-left: 25px;
+  width: 80%;
+}
+
+.card_portofolio {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  width: 100%;
+  padding-top: 35px;
+  margin-top: 7%;
+  overflow: hidden; /* Agar elemen yang bergerak tidak keluar dari kontainer */
+}
+
+.innercardportofolio {
+  margin-left: 30px;
+  width: 30%; /* Lebar card */
+  height: 70%;
+  background-color: transparent;
+  padding: 10px;
+  margin: 0; /* Hilangkan margin */
+  display: flex;
+  text-align: center;
+  align-items: center;
+  animation: moveCard 8s linear infinite; /* Menambahkan animasi */
+}
+
+.h1_portofolio {
+  font-weight: 600;
+  top: 90px;
+  font-size: 2rem;
+  color: #000000;
+  position: relative;
+  top: 65px;
+}
+
+@keyframes moveCard {
+  0% {
+    transform: translateX(0%); /* Mulai dari posisi awal */
+  }
+  25% {
+    transform: translateX(5%); /* Bergerak ke kanan */
+  }
+  50% {
+    transform: translateX(0%); /* Kembali ke posisi awal */
+  }
+  75% {
+    transform: translateX(-20%); /* Bergerak ke kiri */
+  }
+  100% {
+    transform: translateX(0%); /* Kembali ke posisi awal */
+  }
+}
+
+/* Ini tutup Portofolio */
+
+/* Ini Contact plus footer */
+
+.contact {
+  background: linear-gradient(to top, #2b61e7, #eef2f7);
+  height: 50vh;
+}
+
+.text1_footer {
+  width: 35%;
+  position: relative;
+  left: 15%;
+  top: 13%;
+}
+
+.h1_footer {
+  font-weight: 640;
+  top: 90px;
+  font-size: 2.6rem;
+  color: #000000;
+}
+
+.contact_footer {
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fdffff; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+
+.contact_footer1 {
+  color: #002685;
+  margin-left: 5px;
+}
+
+.contact_footer2 {
+  color: #002685;
+  margin-bottom: 20px;
+}
+
+.container {
+  width: 30%;
+  position: relative;
+  bottom: 53%;
+  left: 60%;
+}
+/* Ini tutup contact plus footer */
+
+
+
+/* Ini Responsive Mobile */
+
+/* Media Queries untuk Responsivitas */
+
+/* Untuk layar kecil (mobile) */
+@media (max-width: 768px) {
+  .navbar {
+    width: 100vh;
+  }
+    nav ul {
+      display: none;   /* Hide menu by default */
+    }
+  
+    nav .hamburger {
+      display: flex;   
+      margin-right: 30px;
+    }
+  
+    nav ul.active {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      background: linear-gradient(to left, #7da2ff, #eef2f7);
+      width: 100%;
+      padding: 10px;
+      position: absolute;
+      top: 88%;
+      right: 0;
+    }
+  
+    nav ul li {
+      margin-right: 0;
+      text-align: center;
+      margin-left: 5px;
+    }
+
+    .logo {
+      display: flex;
+      position: relative;
+      left: -20%;
+    }
+/* tutup navbar */
+
+/* Ini Responsif Cover */
+
+
+  .cover {
+    width: 90%; /* Mengatur lebar cover */
+    left: 5%; /* Mengatur posisi cover */
+    top: 7%;
+    z-index: 4;
+    flex-direction: column;  /* Susun elemen secara vertikal */
+    justify-content: flex-start;  /* Letakkan elemen di atas */
+    align-items: flex-start; 
+  }
+
+  .h3_cover {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 4;
+  }
+
+  .h4_cover {
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+
+  .h1_cover {
+    color: #000000;
+    -webkit-text-stroke: 1px #eef2f7; /* Memberikan garis berwarna pada huruf */
+    font-weight: bold; /* Jika ingin huruf lebih tebal */
+    padding-top: 10px;
+  }
+  
+
+  hr {
+    display: none;
+  }
+
+  .button_cover1 {
+    margin-bottom: 15px;
+    margin-top: 25px;
+    position: relative;
+    left: -2%;
+    z-index: 3;
+  }
+
+  .button_cover2 {
+    margin-bottom: 10px;
+    margin-top: 8px;
+    position: relative;
+    left: 1px;
+    z-index: 2;
+  }
+
+  .img_cover1 {
+    display: none;
+  }
+
+  .img_cover3 {
+    display: flex;
+    width: 70%;
+    height: auto;
+    z-index: 1;
+    position: absolute;
+    left: 38%;
+    top: 16%;
+  }
+
+  .img_cover2 {
+    display: none;
+  }
+
+  .about_teks {
+    width: 90%; /* Mengatur lebar teks about */
+    height: 70%;
+    top: 740px; /* Mengatur posisi teks about */
+    right: 5%; /* Mengatur posisi teks about */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .ctnbutton_about {
+    display: flex;
+    flex-direction: column; /* Menyusun tombol secara vertikal */
+    gap: 10px; /* Jarak antar tombol */
+  }
+  
+  .button_about1 {
+    margin-top: 20px;  /* Memberikan jarak atas */
+    margin-bottom: 10px;  /* Memberikan jarak bawah */
+    left: -4px;
+    position: relative;
+  }
+
+  .button_about2 {
+    margin-top: 10px;  /* Memberikan jarak atas */
+    margin-bottom: 10px;  /* Memberikan jarak bawah */
+    left: 10px;
+  }
+
+  .p_about {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .img_about1 {
+    display: none;
+  }
+
+  .h1_about2, .h1_about3 {
+    display: none;
+  }
+
+  .services {
+    height: auto; /* Mengatur tinggi services otomatis */
+  }
+
+  .card {
+    flex-direction: column; /* Mengubah card menjadi kolom */
+    height: auto; /* Mengatur tinggi card otomatis */
+  }
+
+  .inner-card {
+    width: 80%; /* Mengatur lebar inner card menjadi 80% */
+    margin: 10px auto; /* Mengatur margin otomatis */
+    transition: none;
+  }
+
+  .inner-card h3 {
+    font-size: 0.8rem; /* Mengurangi ukuran font untuk judul */
+  }
+
+  .inner-card p {
+    font-size: 1rem; /* Mengurangi ukuran font untuk teks */
+  }
+
+  .h1_services {
+    font-size: 2.5rem;
+    padding-left: 50px;
+  }
+
+  .img_services {
+    width: 100%; /* Mengatur lebar gambar menjadi 100% */
+  }
+
+  .inner-card:hover {
+    transform: none; /* Moves the card up on hover */
+  }
+
+  .portofolio {
+    background-color: #ffffff;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Judul Portofolio */
+  .h1_portofolio {
+    font-weight: 600;
+    font-size: 1.3rem; /* Ukuran font judul lebih kecil */
+    color: #000000;
+    margin-bottom: 30px;
+    margin-top: -50px; /* Mengatur margin agar lebih rapi */
+  }
+  
+  /* Card Container */
+  .card_portofolio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+  grid-template-rows: 3, 150px; /* Baris pertama dan terakhir lebih tinggi, tengah otomatis */
+  gap: 20px; /* Jarak antar kolom dan baris */
+  padding-top: 20px; /* Jarak antara grid dan bagian atas */
+  padding-bottom: 20px; /* Jarak antara grid dan bagian bawah */
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+  
+  
+  /* Inner Card */
+  .innercardportofolio {
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Lebar penuh untuk card */
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 50px;
+    margin-top: 20px;
+    animation: none;
+  }
+  
+  /* Gambar dalam card */
+  .img_portofolio1 {
+    width: 65%; /* Lebar gambar sedikit lebih besar */
+    height: auto;
+    padding-left: 5px;
+  }
+
+  .img_portofolio5 {
+    width: 90%;
+    height: auto;
+    padding-left: 5px;
+  }
+
+  .img_portofolio9 {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .inner-card {
+    width: 90%; /* Mengatur lebar inner card menjadi 90% */
+  }
+
+  .inner-card h3 {
+    font-size: 1.2rem; /* Mengurangi ukuran font untuk judul */
+  }
+
+  .inner-card p {
+    font-size: 1rem; /* Mengurangi ukuran font untuk teks */
+  }
+
+  .img_services {
+    width: 100%; /* Mengatur lebar gambar menjadi 100% */
+  }
+
+  .h1_services {
+    left: 5%; /* Mengatur posisi judul services */
+  }
+
+  .contact {
+    height: auto; /* Mengatur tinggi contact otomatis */
+  }
+
+  .text1_footer {
+    width: 90%; /* Mengatur lebar footer */
+    left: 5%; /* Mengatur posisi footer */
+  }
+
+  .container {
+    width: 90%; /* Mengatur lebar container */
+    left: 5%; /* Mengatur posisi container */
+  }
+}
+
+/* Untuk layar sangat kecil (mobile portrait) */
+@media (max-width: 480px) {
+  nav .logo img {
+    width: 50%; /* Mengurangi ukuran logo */
+  }
+
+  .h1_cover {
+    font-size: 2.5rem; /* Mengurangi ukuran font */
+  }
+
+  .h1_about1, .h1_about2, .h1_about3 {
+    font-size: 2rem; /* Mengurangi ukuran font */
+  }
+
+  .button_cover1, .button_cover2, .button_about1, .button_about2 {
+    width: 100%; /* Mengatur lebar tombol 100% */
+    height: 40px; /* Mengatur tinggi tombol */
+  }
+
+  .img_cover1, .img_cover2, .img_about1 {
+    width: 80%; /* Mengurangi ukuran gambar */
+    left: 10%; /* Mengatur posisi gambar */
+  }
+
+  .img_services {
+    width: 100%; /* Mengatur lebar gambar services */
+  }
+}
